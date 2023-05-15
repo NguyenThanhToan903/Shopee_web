@@ -1,0 +1,45 @@
+:root {
+    --white-color: white;
+    --black-color: black;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* hack */
+    font-size: 10px;
+    line-height: 1.6rem;
+    font-family: Roboto;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Animation */
+
+@keyframes faceIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

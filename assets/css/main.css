@@ -1,0 +1,122 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.header__navbar-list {
+    list-style: none;
+    margin-top: 4px;
+}
+
+.header__navbar-item,
+.header__navbar-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.header__navbar-item:hover,
+.header__navbar-link:hover {
+    color: rgba(255, 255, 255, .6);
+    cursor: pointer;
+}
+
+.header__navbar-item {
+    min-height: 26px;
+    margin-left: 8px;
+    margin-right: 8px;
+    /* padding-bottom: 10px; */
+    position: relative;
+}
+
+.header__navbar-item--strong {
+    font-weight: 400;
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    background-color: #fb9086;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon--link {
+    text-decoration: none;
+}
+
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 4px;
+}
+
+.header__navbar-item,
+.header__navbar-link,
+.header__navbar-icon--link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--white-color);
+}
+
+.header__navbar-icon--link {
+    color: var(--white-color);
+}
+
+/* Header QR code */
+
+.header__qr {
+    display: none;
+    position: absolute;
+    left: -12px;
+    top: 100%;
+    width: 180px;
+    margin-top: 1rem;
+    padding: 12px 8px 8px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    animation: faceIn ease-in .5s;
+}
+
+.header__qr::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: -20px;
+    left: 0;
+    display: block;
+}
+
+.header__qr--img {
+    width: 100%;
+}
+
+.header__qr--apps {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__qr--dwApp {
+    height: 16px;
+}
+
+.header__navbar-item--has-qr:hover .header__qr {
+    display: unset;
+}
