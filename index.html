@@ -66,7 +66,7 @@
               </li>
             </ul>
             <ul class="header__navbar-list">
-              <li class="header__navbar-item">
+              <li class="header__navbar-item header__notify-enable">
                 <a href="" class="header__navbar-link">
                   <i class="header__navbar-icon fa-solid fa-bell"></i>
                   Thông báo
@@ -76,7 +76,7 @@
                     <h3>Thông báo mới nhận</h3>
                   </header>
                   <ul class="header__notify-list">
-                    <li class="header__notify-item">
+                    <li class="header__notify-item header__notify-item--viewed">
                       <a href="" class="header__notify-link">
                         <img
                           src="./assets/image/banPhimLed_V4.png"
@@ -128,6 +128,11 @@
                       </a>
                     </li>
                   </ul>
+                  <footer class="header__notify-footer">
+                    <a href="" class="header__notify-footer--btn"
+                      >Xem tất cả!</a
+                    >
+                  </footer>
                 </div>
               </li>
               <li class="header__navbar-item">
@@ -152,6 +157,13 @@
       <div class="container"></div>
       <footer class="footer"></footer>
     </div>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+
     <script
       src="https://kit.fontawesome.com/a9d19bcc06.js"
       crossorigin="anonymous"
