@@ -168,6 +168,9 @@
 /* Header QR code */
 
 .header__qr {
+    box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    display: unset;
     display: none;
     position: absolute;
     left: -12px;
