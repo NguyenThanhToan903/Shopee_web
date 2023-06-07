@@ -23,6 +23,18 @@ html {
     font-family: Roboto;
 }
 
+button {
+    border: none;
+}
+
+span.separate {
+    display: block;
+    width: calc(100% - 8px);
+    height: 1px;
+    margin: 12px auto 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 ul {
     margin: 0;
 }
@@ -139,14 +151,14 @@ a {
     cursor: pointer;
     height: 32px;
     min-width: 124px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 32px;
     text-transform: uppercase;
     border: none !important;
     border-radius: 2px;
     color: var(--text-color);
     background-color: var(--white-color);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
@@ -159,6 +171,8 @@ a {
     height: 30px;
     font-size: 12px;
 }
+
+/* responsive  */
 
 .grid {
     width: 1200px;
@@ -173,8 +187,83 @@ a {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
 }
 
+/* test */
+
+.grid__column-2 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 16.667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-right: 6px;
+    padding-left: 6px;
+    width: 83.3334%;
+}
+
+/* selection */
+
+.select-input {
+    position: relative;
+    background-color: var(--white-color);
+    height: 32px;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    z-index: 0;
+}
+
+.select-input:hover .input-select-list {
+    animation: faceIn ease-in .3s;
+    display: block !important;
+
+}
+
+.select-input-label {
+    font-size: 1.4rem;
+    padding: 0 12px;
+}
+
+.input-select-content {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+.input-select-list {
+    border-radius: 2px;
+    margin-top: 2px;
+    padding: 8px;
+    background-color: var(--white-color);
+    display: none;
+
+}
+
+.input-select-item {
+    font-size: 1.4rem;
+}
+
+.input-select-link {
+    color: var(--black-color);
+    display: block;
+    padding: 8px;
+}
+
+.input-select-item:hover .input-select-link {
+    color: var(--primary-color);
+}
 
 /* Animation */
 
