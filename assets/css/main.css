@@ -216,7 +216,7 @@
 }
 
 .header__notify {
-    z-index: 1;
+    z-index: 2;
     display: none;
     position: absolute;
     cursor: default;
@@ -550,7 +550,8 @@
     margin-right: 4px;
 }
 
-.input-search-btn:hover {
+.input-search-btn:hover,
+.pagination-item__link.pagination-item__link-stage:hover {
     background-color: #fb6445;
 }
 
@@ -612,6 +613,7 @@
 
 .header-search-history {
     display: none;
+    z-index: 1;
     position: absolute;
     left: 0;
     top: calc(100% + 12px);
@@ -651,6 +653,7 @@
 }
 
 .header-cart-list {
+    z-index: 1;
     display: none;
     cursor: default !important;
     position: absolute;
@@ -722,6 +725,12 @@
     font-weight: 400;
     color: #999999;
     text-align: left;
+
+}
+
+.cart-list {
+    max-height: 30vh;
+    overflow: auto;
 }
 
 .cart-item {
@@ -756,6 +765,16 @@
 
 
 .cart-item-name {
+    text-align: left;
+    line-height: 1.8rem;
+    height: 36px;
+    max-width: 210px;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
     color: var(--text-color);
 }
 
@@ -862,16 +881,12 @@
     font-size: 1.4rem;
     color: var(--text-color);
     padding: 4px 8px;
-    right: 0;
-    transition: right ease-out .2s;
 }
 
 .category-item__link:hover {
-    right: -2px;
     color: var(--primary-color);
 }
 
-/* shop product */
 
 .sort-bar {
     display: flex;
@@ -943,10 +958,27 @@
     color: #cccccc !important;
 }
 
+
+
+.page-product {
+    margin-bottom: 40px;
+}
+
 .page-product-item {
+    height: 100%;
+    box-sizing: border-box;
     position: relative;
     margin-top: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform ease-in-out 0.3s;
+    will-change: transform;
+    border-radius: 2px;
+    background-color: var(--white-color);
+}
 
+.page-product-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
 }
 
 .page-product-item__img {
@@ -958,7 +990,7 @@
 }
 
 .page-product-item__description {
-    background-color: var(--white-color);
+    padding-top: 4px;
 }
 
 .page-product-item__name {
@@ -1050,10 +1082,6 @@ i.page-product-item__like-ative {
     padding: 4px 8px;
 }
 
-.page-product-item__brand {}
-
-.page-product-item__country {}
-
 .page-product-item__favourate {
     position: absolute;
     top: 10px;
@@ -1127,4 +1155,113 @@ i.page-product-item__like-ative {
     text-transform: uppercase;
     font-weight: 400;
     color: var(--white-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px
+}
+
+.pagination-item {
+    text-align: center;
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    min-width: 40px;
+    height: var(--height);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: var(--height);
+    border-radius: 4px;
+    color: #939393;
+}
+
+.pagination-item__link.pagination-item__link-stage {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.pagination-item__icon {
+    font-weight: 300;
+}
+
+
+.footer {
+    padding-top: 24px;
+    border-top: 4px solid var(--primary-color);
+    background-color: var(--white-color);
+}
+
+.footer-heading {
+    font-size: 1.4rem;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.footer-list,
+.footer-download {
+    margin-top: 12px;
+}
+
+.footer-list--item {
+    min-width: 64px;
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: #737373;
+    margin: 2px 0;
+    padding: 4px 2px 4px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-list--item:hover {
+    color: var(--primary-color);
+}
+
+.footer-link--icon {
+
+    font-size: 1.6rem;
+    margin-right: 4px;
+}
+
+.footer-download {
+    display: flex;
+}
+
+.footer_qr-code {
+    width: 80px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+}
+
+.footer-download__apps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 16px;
+}
+
+.footer-download__apps-img {
+    height: 20px;
+
+}
+
+.footer-bottom {
+    background-color: #f5f5f5;
+    padding: 32px 0 8px 0;
+    margin-top: 64px;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
 }
