@@ -4,7 +4,7 @@
     --black-color: black;
     --text-color: #333;
     --border-color: #dbdbdb;
-
+    --gold-color: #ffd839;
     --header-height: 120px;
     --header-navbar-height: 32px;
     --header-container-height: calc(var(--header-height) - var(--header-navbar-height));
